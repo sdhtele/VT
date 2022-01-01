@@ -1,0 +1,6 @@
+[endpoints]
+metadata.movie = 'https://www.showtime.com/api/titles/{title_id}'
+metadata.series = 'https://www.showtime.com/api/titles/series/{title_id}'
+startplay = 'https://www.showtime.com/api/title/startplay/title/{title_id}/format/WIDEVINE'
+license = 'https://www.showtime.com/api/drm/widevine/license'
+endplay = 'https://www.showtime.com/api/title/endplay/title/{title_id}/at/{at}'

@@ -1,0 +1,22 @@
+# This is an example user config file. Shown values are guided *examples* only!
+# You can use `vt cfg` to add any of the shown values from CLI. See `vt cfg -h`.
+
+[device]
+
+[device.profile_name]  # !<< take note that this is done per-profile
+# This data links to the account you use. Make sure you *always* try to use the exact same data
+# on an account. Common sense kind of stuff here. If you need to use a different device type
+# therefore different device data entirely, then you need to remember what you used before if
+# you *ever* wish to use it again. You could copy paste it and comment it all out and switch
+# between the ones you wish to use.
+# Below is *EXAMPLE* device data for a generic TV device type for a Nexus Player STB device.
+# Real data (other than serial) was used. Have common sense with what you use here.
+domain = 'Device'
+app_name = 'com.amazon.amazonvideo.livingroom'  # AIV, com.amazon.amazonvideo.livingroom
+app_version = '1.1'  # AIV: 3.12.0, livingroom: 1.1
+device_model = 'Nexus Player'  # SHIELD Android TV, Nexus Player
+os_version = '8.0.0'  # 25, 8.0.0
+device_type = 'A2SNKIF736WF4T'  # tv_generic, Don't use nvidia_shield as it current returns bad streams!
+device_name = "%FIRST_NAME%'s%DUPE_STRATEGY_1ST% Nexus Player"  # Shield TV, Nexus Player
+device_serial = '...'  # 8-bit (16 char) lowercase-hex str. https://bit.ly/3r5CQt9 or run `os.urandom(8).hex()`
+# software_version = '248'  # might not be used anymore

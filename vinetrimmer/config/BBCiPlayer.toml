@@ -1,0 +1,7 @@
+user_agent = 'smarttv_AFTMM_Build_0003255372676_Chromium_41.0.2250.2'
+api_key = 'x5pfeqccnm6j52mp9c298qdm'
+
+[endpoints]
+metadata = 'https://graph.ibl.api.bbc.co.uk/'
+playlist = 'https://www.bbc.co.uk/programmes/{pid}/playlist.json'
+manifest = 'https://securegate.iplayer.bbc.co.uk/mediaselector/6/select/version/2.0/vpid/{vpid}/format/json/mediaset/{mediaset}/proto/https'

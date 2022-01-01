@@ -1,0 +1,6 @@
+# This is an example user config file. Shown values are guided *examples* only!
+# You can use `vt cfg` to add any of the shown values from CLI. See `vt cfg -h`.
+
+# https://service.privilegemovies.com/content/v6/apikey/39-3-ca770?deviceModel=null&softwareVersion=null
+api_key = 'xnhmx6ak4kypz6my'
+device_id = '...' # https://bit.ly/3r5CQt9 or run `os.urandom(8).hex()`

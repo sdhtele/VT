@@ -1,0 +1,5 @@
+[endpoints]
+content_packages = 'https://capi.9c9media.com/destinations/ctv_web/platforms/desktop/contents/{title_id}/contentpackages'
+contents = 'https://capi.9c9media.com/destinations/ctv_web/platforms/desktop/contents/{title_id}'
+manifest = 'https://capi.9c9media.com/destinations/ctv_web/platforms/desktop/contents/{title_id}/contentpackages/{package_id}/manifest.mpd'
+license = 'https://license.9c9media.ca/widevine'

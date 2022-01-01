@@ -1,0 +1,27 @@
+[endpoints]
+login = 'https://api.channel4.com/online/v2/auth/token'
+title = 'https://api.channel4.com/online/v1/views/content-hubs/{title}.json'
+license = 'https://c4.eme.lp.aws.redbeemedia.com/wvlicenceproxy-service/widevine/acquire'
+
+[keys]
+
+[keys.c4]
+# shorturl.at/knuCG
+
+[keys.android-mod]
+# shorturl.at/knuCG
+
+[client]
+id = '36UUCt98VMQvBAgQ27Au8zGHl31N9LQ1'
+secret = 'shorturl.at/knuCG'
+# c4, yv, ios, xbox, ps, wp8, xboxone, roku, freesat, android, samsung, win8, fvc, yvweb, cast, amazonfire,
+# android-mod, fvp, samsung-dash, virginall4, yvdash, samsungorsay, xbox-dash, xboxone-dash, roku-dash,
+# amazonfire-dash, ps-dash, cast-dash, skyoverip
+name = 'android-mod'  # web: c4, android: android-mod
+
+[device]
+platform_name = 'android'
+device_type = 'mobile'
+device_name = 'Asus Nexus Player (fugu)'  # 'Sony C6903 (C6903)'
+app_version = 'android_app:9.2.5'
+optimizely_datafile = '2908'

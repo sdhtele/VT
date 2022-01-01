@@ -1,0 +1,15 @@
+[endpoints]
+login = 'https://client-api.magine.com/api/login/v2/auth/email'
+title = 'https://client-api.magine.com/api/apiql/v2'
+entitlement = 'https://client-api.magine.com/api/entitlement/v2/asset/{id}'
+manifest = 'https://client-api.magine.com/api/playback/v1/preflight/asset/{id}'
+license = 'https://client-api.magine.com/api/playback/v1/widevine/license'
+
+[device]
+access_token = '6845a85f-0ce1-4ba9-a0a7-cdbfecf71cf6'
+id = '7771ffbe-761e-41fa-b29c-5fd2824e025b'
+model = "89.0.0"
+platform = 'firefox'
+type = 'web'
+drm = 'widevine'
+protocol = 'dashs'

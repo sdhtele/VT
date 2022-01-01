@@ -1,0 +1,4 @@
+[endpoints]
+titles = 'https://clients6.google.com/android_video/v1/asset/list'
+manifest = 'https://playmoviesdfe-pa.clients6.google.com/v1beta/Manifest/GetStreamInfoForDash?alt=json&key=AIzaSyBwtjeaZ4p4VpL44QJxGHbEgynHA0NeXUc'
+license = 'https://playmoviesdfe-pa.clients6.google.com/v1beta/Drm/FetchCencLicense?alt=protojson&key=AIzaSyBwtjeaZ4p4VpL44QJxGHbEgynHA0NeXUc'

@@ -1,0 +1,25 @@
+[endpoints]
+config = 'https://config.clients.peacocktv.com/{territory}/{provider}/{proposition}/{device}/PROD/{version}/config.json'
+login = 'https://rango.id.peacocktv.com/signin/service/international'
+personas = 'https://persona.id.peacocktv.com/persona-store/personas'
+tokens = 'https://ovp.peacocktv.com/auth/tokens'
+me = 'https://ovp.peacocktv.com/auth/users/me'
+node = 'https://atom.peacocktv.com/adapter-calypso/v3/query/node'
+vod = 'https://ovp.peacocktv.com/video/playouts/vod'
+
+[client]
+config_version = '1.0.8'
+territory = 'US'
+provider = 'NBCU'
+proposition = 'NBCUOTT'
+platform = 'ANDROID'  # PC, ANDROID
+device = 'TABLET'  # COMPUTER, TABLET
+id = 'Jcvf1y0whKOI29vRXcJy'
+drm_device_id = 'UNKNOWN'
+client_sdk = 'NBCU-WEB-v4'  # NBCU-ANDROID-v3  NBCU-ANDRTV-v4
+auth_scheme = 'MESSO'
+auth_issuer = 'NOWTV'
+
+[security]
+# shorturl.at/knuCG
+signature_format = 'SkyOTT client="{client}",signature="{signature}",timestamp="{timestamp}",version="1.0"'

@@ -1,0 +1,16 @@
+certificate = """\
+CAUSvQUKtwIIAxIQiL9XNNBCCZ4dfIVPjpztmxja6JbuBSKOAjCCAQoCggEBAMEASAolFyYGiUpGxr33TkoUrLUKJwir2ZWt+5rrfB/v0Zeze9X1gC10a\
+cxioTu0OlUCvm6ccJn3seiBD848lF7kUwa/uXoNzMXO+Oc1OVdTV16PmNCQ7T+eMo/UqLokKJX6rcZhkuqTzvQKidjo5q8a4in0CsxguEume9p+GjgiLE\
+HmQmTFapjs2DZaLwk8+0Oq46IvxG8e8xYVEZsOZk5/NmodlfKjslIaFbVsrrLQqdFfyJXvhGIwsGCl03GYJoHQW2cCQoxv5q6PFD+jH5iZB3e1r/LImUj\
+3eLIDHdgxy4DBp+vXWNMjNzdtNdI/1DvxUxjD+PzyYys041rhZCcCAwEAAToIdnVkdS5jb21AARKAAymTzMBMsQvjbRI4RfBZKB9EXqXxVocdjUovN/PK\
+36QftuuuaEcICXIz6FoN94R1usX6YlJvv7ugFyzONTEXfHb4HXNZT32ji4WCTQpqwXMjwzMgzk/G4WkMyFzB9txFm1KjKtez8DE+AxPXyqt5Wk2FGB+OQ\
+xPDM70B1S1oPNF8y/9K/6NrGp3t7psC2UsKBp3L6DEE/Wfw2+C6tLblmPFZU/E/VkBwKG/TQWGZjGiPbOmhCZ13TC/Pc+X88C1UWMMlPFqDyG/VMPhwcT\
+CjQj/py1/7g9eQJNBja0w9VdXPPext3dWXmb01FECuBKZA8fAlEvyrCHT5Gb2Vc7FP78j5J4TOuc2vTkTq64L7jgtPSVF1J9OXhuZ+zHwul/OhQJPP0Yg\
+68DHGKBbEVQ7z9wItZtNMUWw+UislkzCRyYPlaot2CZ2HXqDPw4OZeRLPdxCl2Zw4U3NawbfT9gSPDsEAEDrABCpwbULeCpUc/mRoSU+DiqQTHuAgVNtg\
+wkiKiA==\
+"""
+
+[endpoints]
+api = 'https://api.vudu.com/api2/'
+cache = 'https://apicache.vudu.com/api2/'
+websocket = 'wss://websocket-cs.vudu.com/webSocket'

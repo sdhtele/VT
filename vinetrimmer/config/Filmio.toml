@@ -1,0 +1,4 @@
+[endpoints]
+login = 'https://filmio.hu/sb/login'
+metadata = 'https://filmio.hu/sb/asset/{title_id}?vf=dash&deviceType=WEB'
+license = 'https://drm-prod.mindigo.hu/widevine/license'

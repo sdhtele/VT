@@ -1,0 +1,88 @@
+[build-system]
+requires = ['poetry-core>=1.0.0']
+build-backend = 'poetry.core.masonry.api'
+
+[tool.poetry]
+name = 'vinetrimmer'
+version = '0.0.7'
+description = 'The most convenient command-line program to download videos from widevine-drm protected video platforms.'
+authors = [
+    'PHOENiX <rlaphoenix@pm.me>',
+    'nyuszika7h <nyuszika7h@gmail.com>',
+    'Mnml <22942379+mnmll@users.noreply.github.com>',
+    'shirtjs <2660574+shirt-dev@users.noreply.github.com>'
+]
+readme = 'README.md'
+homepage = 'https://github.com/rlaphoenix/vinetrimmer'
+repository = 'https://github.com/rlaphoenix/vinetrimmer'
+keywords = ['widevine', 'drm', 'download']
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Environment :: Console',
+    'Intended Audience :: End Users/Desktop',
+    'Natural Language :: English',
+    'Operating System :: OS Independent',
+    'Topic :: Multimedia :: Video',
+    'Topic :: Security :: Cryptography'
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+Brotli = "^1.0.9"
+appdirs = "^1.4.4"
+beautifulsoup4 = "^4.8.2"
+click = "^8.0.1"
+colorama = "^0.4.4"
+coloredlogs = "^15.0"
+construct = "^2.8.8"
+crccheck = "^1.0"
+cryptography = "^3.4.7"
+jsonpickle = "^2.0.0"
+langcodes = { extras = ["data"], version = "^3.1.0" }
+lxml = "^4.6.3"
+m3u8 = "^0.9.0"
+pproxy = "^2.7.7"
+protobuf = "^3.13.0"
+pycaption = "^1.0.6"
+pycountry = "^20.7.3"
+pycryptodomex = "^3.9.9"
+pyhulu = "^1.1.2"
+pymediainfo = "^5.0.3"
+pymp4 = { git = "https://github.com/rlaphoenix/pymp4.git" }
+pymysql = "^1.0.2"
+pytomlpp = "^1.0.2"
+requests = { extras = ["socks"], version = "^2.26.0" }
+tldextract = "^3.1.0"
+tqdm = "^4.61.2"
+Unidecode = "^1.2.0"
+urllib3 = "^1.26.3"
+validators = "^0.18.2"
+websocket-client = "^1.1.0"
+yt-dlp = "^2021.8.2"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.8.4"
+isort = "^5.9.2"
+mypy = "^0.910"
+mypy-protobuf = "^2.6"
+pyinstaller = "^4.4"
+pytest = "^6.2.4"
+types-protobuf = "^3.17.4"
+types-PyMySQL = "^1.0.0"
+types-requests = "^2.25.0"
+
+[tool.poetry.scripts]
+vt = 'vinetrimmer.vinetrimmer:main'
+
+[tool.isort]
+line_length = 120
+classes = ['CTV', 'FPS', 'IO', 'MP4', 'TVNOW']
+
+[tool.mypy]
+exclude = '_pb2\.pyi?$'
+check_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+follow_imports = 'silent'
+ignore_missing_imports = true
+no_implicit_optional = true

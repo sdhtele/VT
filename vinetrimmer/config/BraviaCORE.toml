@@ -1,0 +1,15 @@
+# these keys are currently unused, probably isn't helpful, they appeared on an old patched internal
+# endpoint API's license URL. The bypass_key was url-encoded, and the cd_key was sent as-is.
+bypass_key = 'pLgRrNn!p$3&297EtrMOGQxnn3wSve4g'
+cd_key = 'eyJXVk1TTCI6MX0='
+device_model = 'XR-75Z9J'
+software_version = '8.0.0'
+
+[playlists]
+unlimited = 'FCF0DFE0-D6C8-46D3-B95F-90E3539A0E72'  # free titles
+library = '8CB878F7-256D-4A0F-AA93-F84B67FA1378'  # on-demand titles via credits
+
+[endpoints]
+login = 'https://service.privilegemovies.com/user/v6/login'
+redeem = 'https://service.privilegemovies.com/user/v6/productredemption'
+credits = 'https://service.privilegemovies.com/user/v6/credits'

@@ -1,0 +1,8 @@
+[endpoints]
+homepage = 'https://stan.com.au'
+config = 'https://api.stan.com.au/config/{type}.json'
+login = '/sessions/{type}'
+manifest = 'https://api.stan.com.au/manifest/v1/dash/androidtv.mpd'
+
+[meta]
+login_source = 'www'

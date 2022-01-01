@@ -1,0 +1,19 @@
+[endpoints]
+manifest = 'https://comet.api.hbo.com/express-content/{title_id}'
+tokens = 'https://comet.api.hbo.com/tokens'
+content = 'https://comet.api.hbo.com/content'
+
+[device]
+name = 'desktop'
+os_version = 'undefined'
+serial_number = 'fc576856-840d-4582-86a7-18872f652504'
+
+[client.desktop]
+id = '585b02c8-dbe1-432f-b1bb-11cf670fbeb0'
+version = 'Hadron/50.20.1.183 desktop (DESKTOP)'
+client_version = 'hadron_50.20'
+
+[client.android]
+id = '7161aff6-188a-4718-8d35-69c6ae58884f'
+version = 'Hadron/50.36.0.2 android/50.36.0.2 (ONEPLUS A5010/10)'
+client_version = 'hadron_50.36'

@@ -1,0 +1,8 @@
+[endpoints]
+title_info_web = 'https://bff.apigw.tvnow.de/page/filme/-{title_id}'
+title_info_firetv = 'https://app.tvnow.de/module/teaserrow/format/highlight/{title_id}'
+navigation = 'https://bff.apigw.tvnow.de/module/teaserrow/format/navigation/{title_id}'
+episodes = 'https://bff.apigw.tvnow.de/module/teaserrow/format/episode/{title_id}?season={season}'
+episodes_annual = 'https://bff.apigw.tvnow.de/module/teaserrow/format/episode/{title_id}?year={year}&month={month}'
+player = 'https://bff.apigw.tvnow.de/player/{title_id}?playertracking=true'
+license = 'https://widevine.tvnow.de/index/proxy'

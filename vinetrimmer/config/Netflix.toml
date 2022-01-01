@@ -1,0 +1,212 @@
+certificate = """\
+CAUSwwUKvQIIAxIQ5US6QAvBDzfTtjb4tU/7QxiH8c+TBSKOAjCCAQoCggEBAObzvlu2hZRsapAPx4Aa4GUZj4/GjxgXUtBH4TH\
+SkM40x63wQeyVxlEEo1D/T1FkVM/S+tiKbJiIGaT0Yb5LTAHcJEhODB40TXlwPfcxBjJLfOkF3jP6wIlqbb6OPVkDi6KMTZ3EYL\
+6BEFGfD1ag/LDsPxG6EZIn3k4S3ODcej6YSzG4TnGD0szj5m6uj/2azPZsWAlSNBRUejmP6Tiota7g5u6AWZz0MsgCiEvnxRHmT\
+Ree+LO6U4dswzF3Odr2XBPD/hIAtp0RX8JlcGazBS0GABMMo2qNfCiSiGdyl2xZJq4fq99LoVfCLNChkn1N2NIYLrStQHa35pgO\
+bvhwi7ECAwEAAToQdGVzdC5uZXRmbGl4LmNvbRKAA4TTLzJbDZaKfozb9vDv5qpW5A/DNL9gbnJJi/AIZB3QOW2veGmKT3xaKNQ\
+4NSvo/EyfVlhc4ujd4QPrFgYztGLNrxeyRF0J8XzGOPsvv9Mc9uLHKfiZQuy21KZYWF7HNedJ4qpAe6gqZ6uq7Se7f2JbelzENX\
+8rsTpppKvkgPRIKLspFwv0EJQLPWD1zjew2PjoGEwJYlKbSbHVcUNygplaGmPkUCBThDh7p/5Lx5ff2d/oPpIlFvhqntmfOfumt\
+4i+ZL3fFaObvkjpQFVAajqmfipY0KAtiUYYJAJSbm2DnrqP7+DmO9hmRMm9uJkXC2MxbmeNtJHAHdbgKsqjLHDiqwk1JplFMoC9\
+KNMp2pUNdX9TkcrtJoEDqIn3zX9p+itdt3a9mVFc7/ZL4xpraYdQvOwP5LmXj9galK3s+eQJ7bkX6cCi+2X+iBmCMx4R0XJ3/1g\
+xiM5LiStibCnfInub1nNgJDojxFA3jH/IuUcblEf/5Y0s1SzokBnR8V0KbA==\
+"""
+
+[endpoints]
+website = 'https://www.netflix.com/nq/website/memberapi/{build_id}/pathEvaluator'
+manifest = 'https://www.netflix.com/nq/msl_v1/cadmium/pbo_manifests/^1.0.0/router'
+licence = 'https://www.netflix.com/nq/msl_v1/cadmium/pbo_licenses/^1.0.0/router'
+# https://www.netflix.com/msl/playapi/cadmium/logblob/1?reqAttempt=1&reqPriority=0&reqName=logblob
+# possibly newer api? seems to work fine on handshaking, rest untested
+
+[configuration]
+drm_system = 'widevine'  # chrome and android: widevine, edge: playready
+drm_version = 25  # widevine: 25, playready: 30
+supported_hdcp_versions = ['2.2']  # 720p-max: 1.4, chrome: empty, 4k: 2.2
+is_hdcp_engaged = true  # chrome: false
+
+[profiles]
+AV1 = [
+    'av1-main-L30-dash-cbcs',
+    'av1-main-L30-dash-cbcs-prk',
+    'av1-main-L31-dash-cbcs',
+    'av1-main-L31-dash-cbcs-prk',
+    'av1-main-L40-dash-cbcs',
+    'av1-main-L40-dash-cbcs-prk',
+    'av1-main-L41-dash-cbcs',
+    'av1-main-L41-dash-cbcs-prk',
+    'av1-main-L50-dash-cbcs',
+    'av1-main-L50-dash-cbcs-prk',
+    'av1-main-L51-dash-cbcs',
+    'av1-main-L51-dash-cbcs-prk'
+]
+SUBS = [
+    # 'dfxp-ls-sdh',  # dfxp
+    # 'dfxp-simplesdh',  # dfxp
+    # 'nflx-cmisc',  # image-based
+    'webvtt-lssdh-ios8', # webvtt
+    # 'webvtt-lssdh-ios'  # also webvtt, identical
+]
+
+[profiles.Audio]
+AAC = [
+    'heaac-2-dash',
+    # 'playready-heaac-2-dash',  # does this really exist?
+    'heaac-2hq-dash',
+    'heaac-5.1-dash'
+]
+AC3 = [
+    'dd-5.1-dash',
+]
+EC3 = [
+    'ddplus-2.0-dash',
+    'ddplus-5.1-dash',
+    'ddplus-5.1hq-dash', # 640 kbps
+    'ddplus-atmos-dash', # atmos, requires 4k-capable account plan
+]
+VORB = [
+    'playready-oggvorbis-2-dash',
+    'playready-oggvorbis-5-dash'
+]
+
+[profiles.H264]
+HPL = [
+    'playready-h264hpl22-dash',
+    'playready-h264hpl30-dash',
+    'playready-h264hpl31-dash',
+    'playready-h264hpl40-dash'
+]
+MPL = [
+    'playready-h264mpl30-dash',
+    'playready-h264mpl31-dash',
+    'playready-h264mpl40-dash'
+]
+BPL = [
+    'playready-h264bpl30-dash'
+]
+'720p' = [
+    'playready-h264hpl22-dash',
+    'playready-h264hpl30-dash',
+    'playready-h264hpl31-dash'
+]
+
+[profiles.H265]
+SDR = [
+    'hevc-main10-L30-dash-cenc',
+    'hevc-main10-L30-dash-cenc-prk',
+    'hevc-main10-L30-dash-cenc-prk-do',
+    'hevc-main10-L31-dash-cenc',
+    'hevc-main10-L31-dash-cenc-prk',
+    'hevc-main10-L31-dash-cenc-prk-do',
+    'hevc-main10-L40-dash-cenc',
+    'hevc-main10-L40-dash-cenc-prk',
+    'hevc-main10-L40-dash-cenc-prk-do',
+    'hevc-main10-L41-dash-cenc',
+    'hevc-main10-L41-dash-cenc-prk',
+    'hevc-main10-L41-dash-cenc-prk-do',
+    'hevc-main10-L50-dash-cenc',
+    'hevc-main10-L50-dash-cenc-prk',
+    'hevc-main10-L50-dash-cenc-prk-do',
+    'hevc-main10-L51-dash-cenc',
+    'hevc-main10-L51-dash-cenc-prk',
+    'hevc-main10-L51-dash-cenc-prk-do'
+]
+HDR10 = [
+    'hevc-hdr-main10-L30-dash-cenc',
+    'hevc-hdr-main10-L30-dash-cenc-prk',
+    'hevc-hdr-main10-L30-dash-cenc-prk-do',
+    'hevc-hdr-main10-L31-dash-cenc',
+    'hevc-hdr-main10-L31-dash-cenc-prk',
+    'hevc-hdr-main10-L31-dash-cenc-prk-do',
+    'hevc-hdr-main10-L40-dash-cenc',
+    'hevc-hdr-main10-L40-dash-cenc-prk',
+    'hevc-hdr-main10-L40-dash-cenc-prk-do',
+    'hevc-hdr-main10-L41-dash-cenc',
+    'hevc-hdr-main10-L41-dash-cenc-prk',
+    'hevc-hdr-main10-L41-dash-cenc-prk-do',
+    'hevc-hdr-main10-L50-dash-cenc',
+    'hevc-hdr-main10-L50-dash-cenc-prk',
+    'hevc-hdr-main10-L50-dash-cenc-prk-do',
+    'hevc-hdr-main10-L51-dash-cenc',
+    'hevc-hdr-main10-L51-dash-cenc-prk',
+    'hevc-hdr-main10-L51-dash-cenc-prk-do'
+]
+DV1 = [
+    'hevc-dv-main10-L30-dash-cenc',
+    'hevc-dv-main10-L30-dash-cenc-prk',
+    'hevc-dv-main10-L30-dash-cenc-prk-do',
+    'hevc-dv-main10-L31-dash-cenc',
+    'hevc-dv-main10-L31-dash-cenc-prk',
+    'hevc-dv-main10-L31-dash-cenc-prk-do',
+    'hevc-dv-main10-L40-dash-cenc',
+    'hevc-dv-main10-L40-dash-cenc-prk',
+    'hevc-dv-main10-L40-dash-cenc-prk-do',
+    'hevc-dv-main10-L41-dash-cenc',
+    'hevc-dv-main10-L41-dash-cenc-prk',
+    'hevc-dv-main10-L41-dash-cenc-prk-do',
+    'hevc-dv-main10-L50-dash-cenc',
+    'hevc-dv-main10-L50-dash-cenc-prk',
+    'hevc-dv-main10-L50-dash-cenc-prk-do',
+    'hevc-dv-main10-L51-dash-cenc',
+    'hevc-dv-main10-L51-dash-cenc-prk',
+    'hevc-dv-main10-L51-dash-cenc-prk-do'
+]
+DV5 = [
+    'hevc-dv5-main10-L30-dash-cenc',
+    'hevc-dv5-main10-L30-dash-cenc-prk',
+    'hevc-dv5-main10-L30-dash-cenc-prk-do',
+    'hevc-dv5-main10-L31-dash-cenc',
+    'hevc-dv5-main10-L31-dash-cenc-prk',
+    'hevc-dv5-main10-L31-dash-cenc-prk-do',
+    'hevc-dv5-main10-L40-dash-cenc',
+    'hevc-dv5-main10-L40-dash-cenc-prk',
+    'hevc-dv5-main10-L40-dash-cenc-prk-do',
+    'hevc-dv5-main10-L41-dash-cenc',
+    'hevc-dv5-main10-L41-dash-cenc-prk',
+    'hevc-dv5-main10-L41-dash-cenc-prk-do',
+    'hevc-dv5-main10-L50-dash-cenc',
+    'hevc-dv5-main10-L50-dash-cenc-prk',
+    'hevc-dv5-main10-L50-dash-cenc-prk-do',
+    'hevc-dv5-main10-L51-dash-cenc',
+    'hevc-dv5-main10-L51-dash-cenc-prk',
+    'hevc-dv5-main10-L51-dash-cenc-prk-do'
+]
+
+[profiles.VP9]
+P0 = [
+    'vp9-profile0-L30-dash-cenc',
+    'vp9-profile0-L30-dash-cenc-prk',
+    'vp9-profile0-L31-dash-cenc',
+    'vp9-profile0-L31-dash-cenc-prk',
+    'vp9-profile0-L40-dash-cenc',
+    'vp9-profile0-L40-dash-cenc-prk',
+    'vp9-profile0-L41-dash-cenc',
+    'vp9-profile0-L41-dash-cenc-prk'
+]
+P1 = [
+    'vp9-profile1-L30-dash-cenc',
+    'vp9-profile1-L30-dash-cenc-prk',
+    'vp9-profile1-L31-dash-cenc',
+    'vp9-profile1-L31-dash-cenc-prk',
+    'vp9-profile1-L40-dash-cenc',
+    'vp9-profile1-L40-dash-cenc-prk',
+    'vp9-profile1-L41-dash-cenc',
+    'vp9-profile1-L41-dash-cenc-prk'
+]
+P2 = [
+    'vp9-profile2-L30-dash-cenc',
+    'vp9-profile2-L30-dash-cenc-prk',
+    'vp9-profile2-L31-dash-cenc',
+    'vp9-profile2-L31-dash-cenc-prk',
+    'vp9-profile2-L40-dash-cenc',
+    'vp9-profile2-L40-dash-cenc-prk',
+    'vp9-profile2-L41-dash-cenc',
+    'vp9-profile2-L41-dash-cenc-prk'
+]
+HDR10 = [
+    'vp9-hdr-profile2-L30-dash-cenc-prk',
+    'vp9-hdr-profile2-L31-dash-cenc-prk',
+    'vp9-hdr-profile2-L40-dash-cenc-prk',
+    'vp9-hdr-profile2-L41-dash-cenc-prk',
+    'vp9-hdr-profile2-L50-dash-cenc-prk',
+    'vp9-hdr-profile2-L51-dash-cenc-prk'
+]

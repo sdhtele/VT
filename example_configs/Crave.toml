@@ -1,0 +1,5 @@
+# This is an example user config file. Shown values are guided *examples* only!
+# You can use `vt cfg` to add any of the shown values from CLI. See `vt cfg -h`.
+
+# this is a very minimal config used only for auth until Crave has a proper automated auth system in place.
+auth = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2Nhb..."  # should be a JWT bearer as provided by a Crave request

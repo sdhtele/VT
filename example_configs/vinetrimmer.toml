@@ -1,0 +1,118 @@
+# This is an example vinetrimmer config file. Shown values are guided *examples* only!
+# You can use `vt cfg` to add any of the shown values from CLI. See `vt cfg -h`.
+
+tag = ""  # If you want to tag/credit yourself or your group, put it here.
+
+[arguments]
+# You can save common option defaults you like to use here.
+# These override the default explicitly specified by the dectorators.
+# You CAN override these at runtime using their respective CLI options.
+range_ = 'SDR'
+lang = 'jp'
+
+[arguments.Amazon]
+# You can even do it with each sub-commands arguments too!
+bitrate = 'CVBR'
+
+[aria2c]
+file_allocation = 'falloc'  # Fast allocation
+
+[cdm]
+# Designate which Widevine Content Decryption Module to use for decryption
+default = 'generic_x86_4464_l3'
+Netflix = 'chromecdm_1610_l3'
+
+[cdm.Amazon]
+# You can also specify CDM to use by profile for a service
+john_us = 'generic_x86_l3'
+jane_gb = 'nexus5_l1'
+
+[[cdm_api]]
+# This is a test CDM API thing based off other codebases.
+# I do not have server-side code for this.
+# You can define multiple APIs as long as the names are different.
+name = 'TestAPI'
+host = 'http://xxxxxxxxxxxxxxxx/the_cdm_endpoint'
+key = 'secret/api key'
+device = 'remote device to use'
+type = 'CHROME'
+system_id = 1234
+security_level = 3
+
+[credentials]
+# Specify credentials for any Service here
+# Syntax can be a 2-value list or a colon (:) separated string
+
+[credentials.Amazon]
+jane = ['jane@example.tld', 'LoremIpsum99']
+john = ['john@example.tld', 'LoremIpsum98']
+james = ['james@gmail.com', 'TheFriend97']
+
+[credentials.Netflix]
+john = ['john@gmail.com', 'TheGuyWhoPaysForTheNetflix69420']
+
+[credentials.iTunes]
+will = 'will@gmail.com:applefanboy420XxWokexX'
+
+[directories]
+# Default temp dir:
+#   Windows: %LOCALAPPDATA%\Temp\vinetrimmer or C:\TEMP\vinetrimmer
+#   macOS/Linux: /var/tmp
+temp = ""
+downloads = "~/Downloads/vinetrimmer"
+
+[headers]
+# This is a Case-Insensitive dictionary of headers that all services will start with when sending
+# requests. Put sensible common defaults here, and if a specific service needs something else,
+# then do `self.session.headers.update({ .. dict of headers key: values .. })`.
+# Do NOT Override Accept-Encoding. That should only ever be changed by Python-requests!
+User-Agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.75 Safari/537.36'
+Accept-Language = 'en-US,en;q=0.8'
+
+[[key_vaults]]
+# Key Vaults cache your newly obtained keys, and when needed, fetches from the vault too.
+# At least a local key vault is highly recommended as it can help reduce CDM key re-use.
+type = 'remote'
+name = "John#0001's Vault"
+host = '127.0.0.1'
+database = 'vault'
+username = 'jane11'
+password = 'Doe123'
+
+[[key_vaults]]
+type = 'local'
+name = 'Local'
+path = 'C:/Users/Jane11/Documents/vinetrimmer/data/key_store.db'
+
+[nordvpn]
+# Like `proxies` above, this does the same thing except it automatically generates a proxy string
+# for a nordvpn server automatically.
+# The credentials should be `Service credentials` NOT your Nord account details!
+# https://my.nordaccount.com/dashboard/nordvpn/ (Under advanced configuration).
+username = 'zxqsR7C5CyGwmGb6KSvk8qsZ'
+password = 'wXVHmht22hhRKUEQ32PQVjCZ'
+# servers = { us = 12 }  # force specific servers for a proxy region
+
+[profiles]
+# Designate which Profile to use for each Service
+default = 'jane'
+All4 = false  # service needs no profile
+CTV = false
+DisneyPlus = 'john'
+Netflix = 'james'
+
+[profiles.Amazon]
+# You can define multiple profile choices (zones) for a service
+# Specify which to use with -z/--zone or let it ask you
+main = 'jane'
+uk = 'john'
+us = 'james'
+primevideo = 'john'
+
+[proxies]
+# This is a dictionary of proxies you wish to use on services that require a specific country IP.
+# The dictionary key needs to be an alpha 2 country code (2-letter code, e.g. `us`, `gb`, `jp`, `de`).
+# The value needs to be the proxy string which should be recognizable by python-requests and curl.
+# e.g.: https://username:password123@subdomain.hostname.ext:89
+# If you don't want any, just have this section blank or remove the [proxies] entirely
+us = 'john%40email.tld:password123@proxy-us.domain.tld:8080'

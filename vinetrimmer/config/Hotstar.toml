@@ -1,0 +1,17 @@
+[endpoints]
+login = 'https://api.hotstar.com/in/aadhar/v2/web/in/user/login'
+refresh = 'https://api.hotstar.com/in/aadhar/v2/web/in/users/refresh-token'
+tv_title = 'https://api.hotstar.com/o/v1/show/detail'
+tv_episodes = 'https://api.hotstar.com/o/v1/tray/g/1/detail'
+movie_title = 'https://api.hotstar.com/o/v1/movie/detail'
+manifest = 'https://api.hotstar.com/play/v2/playback/content/{id}'
+
+[device]
+
+[device.os]
+name = 'Windows'
+version = 10
+
+[device.platform]
+name = 'web'
+version = '7.2.0'

@@ -1,0 +1,4 @@
+[endpoints]
+movie = 'https://www.paramountplus.com/apps-api/v3.0/androidphone/movies/{title_id}.json'
+tv = 'https://www.paramountplus.com/apps-api/v2.0/androidphone/shows/{title_id}/videos/config/SHOW_LANDING_EPISODES.json'
+section = 'https://www.paramountplus.com/apps-api/v2.0/androidphone/videos/section/{id}.json'

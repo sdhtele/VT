@@ -1,0 +1,8 @@
+# This is an example user config file. Shown values are guided *examples* only!
+# You can use `vt cfg` to add any of the shown values from CLI. See `vt cfg -h`.
+
+# Location information used by some Disney+'s BAMSDK APIs.
+# The Proxy (or home IP) location will automatically be used instead if available.
+location_x = 31.535222  # in the ocean off the coast of california
+location_y = -117.122145
+# profile = 2  # can be the name, the profile ID, the profile number (starting from 1), remove for auto

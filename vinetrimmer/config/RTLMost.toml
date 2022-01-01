@@ -1,0 +1,11 @@
+api_key = '3_PPu-M2jkoPTYt4mn-hVBG6nGPBjwEX6JJgwSNZi9X-ggzQr0lnx3Gt3gEIDscSSW'
+
+[endpoints]
+device_registration = 'https://e.m6web.fr/info?customer=rtlhu'
+login = 'https://accounts.eu1.gigya.com/accounts.login'
+tokens = 'https://accounts.eu1.gigya.com/socialize.getSavedResponse'
+clip_info = 'https://pc.middleware.6play.fr/6play/v2/platforms/m6group_web/services/rtlhu_rtl_most/videos/clip_{clip_id}'
+program_info = 'https://pc.middleware.6play.fr/6play/v2/platforms/m6group_web/services/rtlhu_rtl_most/programs/{program_id}/videos'
+jwt = 'https://front-auth.6cloud.fr/v2/platforms/m6group_web/getJwt'
+license_token = 'https://drm.6cloud.fr/v1/customers/rtlhu/platforms/m6group_web/services/rtlhu_rtl_most/users/{uid}/videos/clip_{clip_id}/upfront-token'
+license = 'https://lic.drmtoday.com/license-proxy-widevine/cenc/'
