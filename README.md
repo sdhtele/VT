@@ -14,6 +14,16 @@
 - Twitter details of the private repo vinetrimmer has been send
 - WE just want that you patch all these sites
 
+## Developers details
+    'PHOENiX <rlaphoenix@pm.me>',
+    'nyuszika7h <nyuszika7h@gmail.com>',
+    'Mnml <22942379+mnmll@users.noreply.github.com>',
+    'shirtjs <2660574+shirt-dev@users.noreply.github.com>'
+
+homepage = 'https://github.com/rlaphoenix/vinetrimmer'
+repository = 'https://github.com/rlaphoenix/vinetrimmer'
+
+
 ## NEED CDM ?
 
 - 🎉 Need L1 CDM FOR AMZN ,NF,DSNP mail us on wvfuck@protonmail.com,CDM is not free paid only
