@@ -12,6 +12,8 @@
 
 - 🎉 Need L1 CDM FOR AMZN ,NF,DSNP mail us on wvfuck@protonmail.com,CDM is not free paid only
 
+
+
 <p align="center">
     <img src="https://open.vscode.dev/badges/open-in-vscode.svg" alt="Open in Visual Studio Code"/>
     </a>
@@ -26,17 +28,36 @@
     </a>
 </p>
 
-## Features
 
-- 🎉 20 Services Supported and counting
-- 🧩 Modularised class-based OOP services
-- 🗃️ Local and Remote SQL-based Key Vault database
-- ⚙️ TOML app and user secrets configuration
-- 📦 Local .wvd and Remote API-based Widevine Device support
-- 🛠️ Multiple CLI commands and sub-commands
-- 👥 Multi-profile support per-service with credentials and/or cookies
-- ❤️ Supports Netscape format cookies and `username:password` format credentials
-- 🤘 Forever FOSS!
+## DRM Sites Supported
+
+- Amazon
+- Netflix
+- Apple Tv Plus
+- DisneyPlus
+- Bbciplayer
+- Braviacore
+- Crave
+- CTV
+- Disney Now
+- Filmio
+- Flixole
+- Google Play
+- HBO MAX
+- Hotstar
+- HULU
+- Itunes
+- Paramount Plus
+- Peacock
+- Rakutentv
+- Rtlmost
+- Showtime
+- Spectrum
+- Stan
+- TVNow
+- Video Land
+- Vudu
+
 
 ## To-do
 
