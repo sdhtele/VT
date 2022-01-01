@@ -5,6 +5,12 @@
 </p>
 
 <p align="center">
+    🍃✂️ <a href="https://github.com/WVDUMP/vinetrimmer">Need L1 CDm For AMZN,DSNP,Netflix& more</a>
+    <br/>
+    <sup><em>Mail To wvfuck@protonmail.com.</em></sup>
+</p>
+
+<p align="center">
     <img src="https://open.vscode.dev/badges/open-in-vscode.svg" alt="Open in Visual Studio Code"/>
     </a>
     <img src="https://img.shields.io/badge/license-GPL--3.0-orange" alt="GPL-3.0 License">
