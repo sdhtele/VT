@@ -19,8 +19,6 @@
     </a>
     <img src="https://img.shields.io/badge/license-GPL--3.0-orange" alt="GPL-3.0 License">
     </a>
-    <img src="https://github.com/WVDUMP/vinetrimmer/actions/workflows/build.yml/badge.svg" alt="Build status">
-    </a>
     <a href="https://python.org">
         <img src="https://img.shields.io/badge/python-3.7%2B-informational" alt="Python version">
     </a>
