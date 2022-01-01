@@ -20,9 +20,6 @@
     'Mnml <22942379+mnmll@users.noreply.github.com>',
     'shirtjs <2660574+shirt-dev@users.noreply.github.com>'
 
-homepage = 'https://github.com/rlaphoenix/vinetrimmer'
-repository = 'https://github.com/rlaphoenix/vinetrimmer'
-
 
 ## NEED CDM ?
 
