@@ -4,11 +4,9 @@
     <sup><em>Widevine DRM downloader and decrypter.</em></sup>
 </p>
 
-<p align="center">
-    🍃✂️ <a href="https://github.com/WVDUMP/vinetrimmer">Need L1 CDm For AMZN,DSNP,Netflix& more</a>
-    <br/>
-    <sup><em>Mail To wvfuck@protonmail.com.</em></sup>
-</p>
+## Features
+
+- 🎉 Need L1 CDM FOR AMZN ,NF,DSNP mail us on wvfuck@protonmail.com,CDM is not free paid only
 
 <p align="center">
     <img src="https://open.vscode.dev/badges/open-in-vscode.svg" alt="Open in Visual Studio Code"/>
