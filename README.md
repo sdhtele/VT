@@ -5,6 +5,14 @@
 </p>
 
 ## Thanks to wvleaks for this leak 
+ 
+## Message to Motion Pictures Association
+
+- We have mailed you the personal details of the developers of this
+- Discord Chat Dumps has been mailed
+- Links of all discord Chat groups added
+- twitter details of the private repo vinetrimmer has been send
+- WE just want that you patch all these sites
 
 ## NEED CDM ?
 
